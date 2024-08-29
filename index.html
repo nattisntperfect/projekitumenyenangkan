@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>SAVE THE 3ARTH</title>
+	<link rel="stylesheet" href="style.css">
+</head>
+<body>
+	<div class="container">
+		<div class="header">
+			<h1>Save The 3ARTH</h1>
+		</div>
+		<div class="homepage">
+			<h2>Selamat Datang di Website Kami!</h2>
+			<p>Mohon maaf apabila ada kekurangan</p>
+			<button onclick="showSlider()">Klik tombol ini</button>
+		</div>
+		<div class="slider">
+			<div class="slide" id="slide1">
+				<img src="komik digital.jpg" alt="Portrait Image" class="portrait">
+				<p>Sudah waktunya kita semua ikut serta dalam upaya menyelamatkan Bumi. Tindakan kecil seperti tidak membuang sampah sembarangan, mengurangi penggunaan plastik, dan mendaur ulang barang-barang yang sudah tidak terpakai dapat memberikan dampak besar bagi lingkungan. Setiap tindakan kecil yang kita lakukan dapat membantu mengurangi polusi dan menjaga keindahan alam untuk generasi mendatang.
+
+                    Mari bersama-sama menerapkan prinsip 3R dalam kehidupan sehari-hari. Kurangi konsumsi yang berlebihan, gunakan kembali barang-barang yang masih layak, dan jangan lupa untuk selalu mendaur ulang. Ingat, menyelamatkan Bumi dimulai dari langkah-langkah kecil yang kita ambil hari ini.</p>
+			</div>
+			<div class="slide" id="slide2">
+				<img src="WhatsApp Image 2024-08-29 at 20.55.05_52a0e70f.jpg" alt="Image 2">
+				<p>Mengurangi limbah fast fashion bukan hanya tentang menjaga lingkungan, tetapi juga tentang masa depan kita bersama. Dengan memilih pakaian berkualitas yang tahan lama dan mendukung merek yang berkomitmen pada praktik berkelanjutan, kita tidak hanya mengurangi jejak karbon kita, tetapi juga menciptakan dunia yang lebih bersih dan sehat untuk generasi mendatang. Mari ubah kebiasaan belanja kita menjadi lebih bijak dan bertanggung jawab, karena setiap keputusan kita hari ini akan membentuk dunia yang lebih baik esok hari</p>
+			</div>
+			<div class="slide" id="slide3">
+				<video width="100%" controls>
+					<source src="WhatsApp Video 2024-08-29 at 21.10.35_80f9fffb.mp4" type="video/mp4">
+				
+				</video>
+				<p>tengs <p>
+			</div>
+		</div>
+		<div class="nav">
+			<button class="prev" onclick="prevSlide()">Previous</button>
+			<button class="next" onclick="nextSlide()">Next</button>
+		</div>
+	</div>
+
+	<script>
+		let slideIndex = 1;
+		showSlide(slideIndex);
+
+		function nextSlide() {
+			showSlide(slideIndex += 1);
+		}
+
+		function prevSlide() {
+			showSlide(slideIndex -= 1);
+		}
+
+		function showSlide(n) {
+			let slides = document.getElementsByClassName("slide");
+			if (n > slides.length) { slideIndex = 1 }
+			if (n < 1) { slideIndex = slides.length }
+			for (let i = 0; i < slides.length; i++) {
+				slides[i].style.display = "none";
+			}
+			slides[slideIndex - 1].style.display = "block";
+		}
+
+		function showSlider() {
+			document.querySelector(".homepage").style.display = "none";
+			document.querySelector(".slider").style.display = "block";
+		}
+	</script>
+</body>
+</html>
